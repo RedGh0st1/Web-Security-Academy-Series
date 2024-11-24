@@ -1,0 +1,3 @@
+Blind SQL injection vulnerabilities
+
+Lab #3:

