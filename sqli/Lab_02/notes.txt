@@ -1,0 +1,8 @@
+Lab #2: SQL injection vulnerability allowing login bypass
+
+Task:
+This Lab contains a SQl injection vulnerability in the login function
+Using admin'--
+
+Goal:
+Perform a SQL injection attack that logs in to the application as the administrator user.
