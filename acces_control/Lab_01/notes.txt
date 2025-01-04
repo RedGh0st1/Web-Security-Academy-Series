@@ -1,0 +1,28 @@
+Lab #1:
+Unprotected admin functionality
+
+Goal:
+The objective of this lab is to exploit an unprotected admin panel and delete the user “carlos.”
+
+Solution:
+	1.	Locate robots.txt:
+
+	•	Access the lab URL in your browser.
+	•	Append /robots.txt to the URL to view the file:
+        https:// /robots.txt
+
+    	•	The content of robots.txt included a Disallow directive, which disclosed the path to the admin panel:
+
+    2.	Access the Admin Panel:
+	   •	Replace /robots.txt in the URL with /administrator-panel to navigate to the admin panel:
+        https://<lab-url>/administrator-panel
+
+
+
+   3.	Delete the User “carlos”:
+	•	On the admin panel page, locate the option to manage users or delete accounts.
+	•	Select “carlos” from the list of users and confirm the deletion.    
+
+
+Result:
+By accessing the robots.txt file and using the disclosed path to the admin panel, I successfully located the unprotected admin functionality. Navigating to the admin panel and deleting “carlos” completed the lab.    

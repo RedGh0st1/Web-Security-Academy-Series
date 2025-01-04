@@ -1,0 +1,24 @@
+Lab #2: Unprotected admin functionality with unpredictable unreleased
+
+Goal:
+This lab has an unprotected admin panel. It's located at an unpredictable location, but the location is disclosed somewhere in the application.
+Solve the lab by accessing the admin panel, and using it to delete the user carlos.
+
+Solution:
+	1.	Analysis with Burp Suite:
+	•	I intercepted and inspected the application traffic using Burp Suite.
+	•	On the homepage, I identified a JavaScript function in the source code that disclosed the administrator’s login credentials and the hidden admin panel’s path.
+	2.	Extracting the Path:
+	•	The JavaScript function revealed the admin panel location: /admin-96ryxh.
+	3.	Performing the Action:
+	•	Using the disclosed credentials, I accessed the admin panel.
+	•	To delete the user “carlos,” I sent the following HTTP request:
+        GET /admin-96ryxh/delete/carlos HTTP/1.1
+        Host: <lab-hostname>
+
+
+
+	The request successfully removed the user “carlos.”
+
+ Result:
+By leveraging Burp Suite to analyze the JavaScript code and locate the admin panel, I was able to access it and delete the user “carlos,” successfully solving the lab.
