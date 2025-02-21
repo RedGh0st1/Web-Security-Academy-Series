@@ -1,0 +1,13 @@
+Lab #3: User role controlled by request parameter
+
+This lab has an admin panel at /admin, which identifies administrators using a forgeable cookie.
+
+Goal :
+Solve the lab by accessing the admin panel and using it to delete the user carlos.
+You can log in to your own account using the following credentials: wiener:peter
+
+steps 
+ Turned on burp suite 
+ open the browser on burp suite 
+ logged in to account with credentials given 
+ checked on response on HTTP history in burp suite
